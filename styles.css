@@ -2,13 +2,19 @@
 .container {
   display: flex; /* Use flexbox to align children horizontally */
   height: 100vh; /* Full viewport height */
+  margin: 0px; 
+  padding: 0px;
 }
 
 /* Style for the side navigation bar */
 nav {
+  position: fixed; /* Fix the position of the nav */
   width: 200px; /* Adjust the width as needed */
   background-color: #1d74ed; /* Background color */
   padding-top: 0px; /* Padding at the top */
+  top: 0px;
+  margin: 0px;
+  height: 100%;
   color: rgb(253, 253, 253); /* Text color */
 }
 
@@ -40,8 +46,9 @@ nav ul li a:hover {
 
 /* Style for the main content */
 .main-content {
-  flex-grow: 1; /* Take up the remaining space */
-  padding: 20px; /* Add some padding */
+
+  padding: 0px; /* Add some padding */
+  margin-left: 200px; /* Adjust the margin to account for the nav width */
 }
 
 .profile-pic {
@@ -57,6 +64,23 @@ nav ul li a:hover {
   display: flex; /* Use flexbox for alignment */
   flex-direction: column; /* Stack items vertically */
   align-items: center; /* Center items horizontally */
-  text-align: center; /* Center align text */
+  text-align: left; /* Center align text */
 }
 
+#intro.section {
+  background: #a7ffeb repeat;
+  position: relative;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
